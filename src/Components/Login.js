@@ -7,6 +7,7 @@ const Login = () => {
     const [alerts,setAlerts] = useState(null)
     const [show,setShow]=useState(false)
     
+    // a function to handle events after submission of form
     const handleclick = async (e) => {
         e.preventDefault();
         const response = await fetch(`http://localhost:5000/api/auth/login`, {

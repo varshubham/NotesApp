@@ -11,6 +11,8 @@ const Addnote = () => {
   var stitle = false;
   var desc = false
 
+
+  // a function which handle events after user submit add form
   const handleclick = (e) => {
     e.preventDefault();
     notes.map((data) => {
@@ -48,7 +50,6 @@ const Addnote = () => {
       }, 1500);
     }
 
-
     if(desc && !stitle){
       setAlerts({
         type:"danger",
@@ -62,6 +63,8 @@ const Addnote = () => {
     
     document.getElementById('form').reset()
   }
+
+  // set the note as per the value of field changes
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value })
   }

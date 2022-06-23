@@ -39,9 +39,10 @@ const Notes = () => {
     const onChange = (e) => {
         setNote({ ...note, [e.target.name]: e.target.value })
     }
+    // a modal for editing of the note 
     return (<>
        
-
+        
         <button type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" ref={ref}>
             Launch demo modal
         </button>
