@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
 
 
-const mongoURI = process.env.MONGOURI ||  "mongodb+srv://varshubham:varshubham@cluster0.uroi4c3.mongodb.net/Inotebook"
+dotenv.config();
+const mongoURI =process.env.MONGO_URI
 
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI,()=>{
